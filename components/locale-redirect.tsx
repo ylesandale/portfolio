@@ -4,6 +4,7 @@ import { usePathname } from 'next/navigation'
 import { useEffect } from 'react'
 
 import { type Locale, locales } from '@/const/routing'
+import { getBasePath } from '@/utils/get-base-path'
 import { getBrowserLocale } from '@/utils/get-browser-locale'
 
 export const LocaleRedirect = () => {
@@ -15,7 +16,9 @@ export const LocaleRedirect = () => {
 
     if (urlLocale && !locales.includes(urlLocale as Locale)) {
       const validLocale = getBrowserLocale()
-      const newPath = `/${validLocale}${pathname.replace(`/${urlLocale}`, '')}`
+      const basePath = getBasePath()
+      const remainingPath = pathname.replace(`/${urlLocale}`, '') || ''
+      const newPath = `${basePath}/${validLocale}${remainingPath}`
       window.location.replace(newPath)
     }
   }, [pathname])

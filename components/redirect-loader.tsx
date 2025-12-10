@@ -3,12 +3,14 @@
 import { motion } from 'framer-motion'
 import { useEffect } from 'react'
 
+import { getBasePath } from '@/utils/get-base-path'
 import { getBrowserLocale } from '@/utils/get-browser-locale'
 
 export const RedirectLoader = () => {
   useEffect(() => {
     const locale = getBrowserLocale()
-    window.location.replace(`/${locale}`)
+    const basePath = getBasePath()
+    window.location.replace(`${basePath}/${locale}`)
   }, [])
 
   return (

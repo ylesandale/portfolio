@@ -4,6 +4,7 @@ import { useLocale } from 'next-intl'
 import { LuLanguages } from 'react-icons/lu'
 
 import { locales } from '@/const/routing'
+import { getBasePath } from '@/utils/get-base-path'
 
 import { Button } from './ui/button'
 import {
@@ -22,8 +23,8 @@ export const LanguageSwitcher = () => {
   const locale = useLocale()
 
   const switchLocale = (newLocale: string) => {
-    const newPath = `/${newLocale}`
-    // Для статического экспорта используем полную перезагрузку страницы
+    const basePath = getBasePath()
+    const newPath = `${basePath}/${newLocale}`
     window.location.replace(newPath)
   }
 
