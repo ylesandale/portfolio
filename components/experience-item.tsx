@@ -6,7 +6,6 @@ import { useTranslations } from 'next-intl'
 
 import { fadeInUpWithDelay } from '@/const/animations'
 import type { Experience } from '@/const/experience'
-import { getStaticPath } from '@/utils/get-static-path'
 
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
 
@@ -30,7 +29,7 @@ export const ExperienceItem = ({ item }: ExperienceItemProps) => {
         <CardContent>
           <p className="text-muted-foreground mb-2">{t(description)}</p>
           <Link
-            href={'/resume.pdf'}
+            href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm text-primary hover:underline transition-colors"

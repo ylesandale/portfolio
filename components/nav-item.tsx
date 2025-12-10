@@ -5,7 +5,6 @@ import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 
 import type { NavItem as NavItemType } from '@/const/nav-menu'
-import { getStaticPath } from '@/utils/get-static-path'
 import { scrollToSection } from '@/utils/scroll-to-section'
 
 type NavItemProps = {
@@ -46,7 +45,7 @@ export const NavItem = ({
     <>
       {'href' in item && item.href ? (
         <Link
-          href={getStaticPath(item.href)}
+          href={item.href}
           target="_blank"
           rel="noopener noreferrer"
           className={baseClassName}
