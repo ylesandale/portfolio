@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 
 import { fadeInUp } from '@/const/animations'
+import { getStaticPath } from '@/utils/get-static-path'
 
 export const Footer = () => {
   const t = useTranslations()
@@ -15,7 +16,7 @@ export const Footer = () => {
       <div className="max-w-4xl mx-auto">
         <motion.div className="flex flex-col items-center gap-6" {...fadeInUp}>
           <Link
-            href="/resume.pdf"
+            href={getStaticPath('/resume.pdf')}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 text-base sm:text-lg font-medium text-muted-foreground hover:text-foreground transition-colors"

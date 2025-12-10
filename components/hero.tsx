@@ -7,6 +7,7 @@ import { useTranslations } from 'next-intl'
 import { fadeInUp } from '@/const/animations'
 import { navItems } from '@/const/nav-menu'
 import { socialLinks } from '@/const/social-links'
+import { getStaticPath } from '@/utils/get-static-path'
 
 import { NavItem } from './nav-item'
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar'
@@ -21,7 +22,7 @@ export const Hero = () => {
     >
       <motion.div {...fadeInUp}>
         <Avatar className="h-24 w-24 sm:h-32 sm:w-32 border-2 border-border">
-          <AvatarImage src="/avatar.jpg" alt="Profile" />
+          <AvatarImage src={getStaticPath('/avatar.jpg')} alt="Profile" />
           <AvatarFallback className="text-xl sm:text-2xl">PM</AvatarFallback>
         </Avatar>
       </motion.div>

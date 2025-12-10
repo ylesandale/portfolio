@@ -11,6 +11,7 @@ import {
 } from '@/const/animations'
 import { navItems } from '@/const/nav-menu'
 import { useMainBlock } from '@/hooks/use-scroll-to-section'
+import { getStaticPath } from '@/utils/get-static-path'
 
 import { LanguageSwitcher } from './language-switcher'
 import { StickyNavItem } from './nav-item'
@@ -39,7 +40,7 @@ export const StickyHeader = () => {
                 variants={slideFromLeftVariants}
               >
                 <Avatar className="h-8 w-8 sm:h-10 sm:w-10 border-2 border-border">
-                  <AvatarImage src="/avatar.jpg" alt="avatar" />
+                  <AvatarImage src={getStaticPath('/avatar.jpg')} alt="avatar" />
                   <AvatarFallback className="text-xs sm:text-sm">
                     PM
                   </AvatarFallback>
