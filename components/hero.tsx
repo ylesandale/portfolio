@@ -4,10 +4,12 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
-import { fadeInUp, navItems, socialLinks } from '@/const'
+import { fadeInUp } from '@/const/animations'
+import { navItems } from '@/const/nav-menu'
+import { socialLinks } from '@/const/social-links'
 
 import { NavItem } from './nav-item'
+import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar'
 
 export const Hero = () => {
   const t = useTranslations()

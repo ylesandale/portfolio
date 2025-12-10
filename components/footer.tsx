@@ -5,7 +5,7 @@ import { ExternalLink } from 'lucide-react'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 
-import { fadeInUp } from '@/const'
+import { fadeInUp } from '@/const/animations'
 
 export const Footer = () => {
   const t = useTranslations()

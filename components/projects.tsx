@@ -3,8 +3,9 @@
 import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 
-import { fadeInUp, projectsItems } from '@/const'
-import { useShowMore } from '@/hooks'
+import { fadeInUp } from '@/const/animations'
+import { projectsItems } from '@/const/projects'
+import { useShowMore } from '@/hooks/use-show-more'
 
 import { ProjectItem } from './project-item'
 import { ShowMoreButton } from './show-more-button'

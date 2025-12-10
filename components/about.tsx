@@ -3,8 +3,9 @@
 import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 
-import { Card, CardContent } from '@/components/ui/card'
-import { fadeInUp, fadeInUpWithDelay } from '@/const'
+import { fadeInUp, fadeInUpWithDelay } from '@/const/animations'
+
+import { Card, CardContent } from './ui/card'
 
 export const About = () => {
   const t = useTranslations()

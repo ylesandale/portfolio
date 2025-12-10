@@ -2,20 +2,20 @@
 
 import { AnimatePresence, motion } from 'framer-motion'
 
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import {
-  navItems,
   slideFromLeftVariants,
   slideFromRightVariants,
   slideFromRightWithDelayVariants,
   staggerContainerVariants,
   stickyHeaderAnimation,
-} from '@/const'
-import { useMainBlock } from '@/hooks'
+} from '@/const/animations'
+import { navItems } from '@/const/nav-menu'
+import { useMainBlock } from '@/hooks/use-scroll-to-section'
 
 import { LanguageSwitcher } from './language-switcher'
 import { StickyNavItem } from './nav-item'
 import { ThemeSwitcher } from './theme-switcher'
+import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar'
 
 export const StickyHeader = () => {
   const { isMainBlockHidden } = useMainBlock()

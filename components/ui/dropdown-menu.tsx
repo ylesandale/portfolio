@@ -20,11 +20,9 @@ import {
 import type { ComponentPropsWithoutRef } from 'react'
 import { LuCheck, LuChevronRight, LuCircle } from 'react-icons/lu'
 
-import { cn } from '@/utils'
+import { cn } from '@/utils/cn'
 
-const DropdownMenu = ({
-  ...props
-}: ComponentPropsWithoutRef<typeof Root>) => {
+const DropdownMenu = ({ ...props }: ComponentPropsWithoutRef<typeof Root>) => {
   return <Root data-slot="dropdown-menu" {...props} />
 }
 

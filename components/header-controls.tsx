@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 
-import { fadeInUp } from '@/const'
+import { fadeInUp } from '@/const/animations'
 
 import { LanguageSwitcher } from './language-switcher'
 import { ThemeSwitcher } from './theme-switcher'

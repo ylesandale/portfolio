@@ -4,8 +4,9 @@ import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import { LuChevronDown, LuChevronUp } from 'react-icons/lu'
 
-import { Button } from '@/components/ui/button'
-import { fadeInUpWithDelay } from '@/const'
+import { fadeInUpWithDelay } from '@/const/animations'
+
+import { Button } from './ui/button'
 
 type ShowMoreButtonProps = {
   showAll: boolean

@@ -3,9 +3,9 @@
 import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 
-import { fadeInUp } from '@/const'
+import { fadeInUp } from '@/const/animations'
 import { certificationsItems } from '@/const/certifications'
-import { useShowMore } from '@/hooks'
+import { useShowMore } from '@/hooks/use-show-more'
 
 import { CertificationItem } from './certification-item'
 import { ShowMoreButton } from './show-more-button'

@@ -4,9 +4,10 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { useLocale } from 'next-intl'
 
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { fadeInUpWithDelay } from '@/const'
+import { fadeInUpWithDelay } from '@/const/animations'
 import type { Certification } from '@/const/certifications'
+
+import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
 
 interface CertificationItemProps {
   item: Certification

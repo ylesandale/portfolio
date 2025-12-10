@@ -1,6 +1,6 @@
 import type { ComponentPropsWithoutRef } from 'react'
 
-import { cn } from '@/utils'
+import { cn } from '@/utils/cn'
 
 const Card = ({ className, ...props }: ComponentPropsWithoutRef<'div'>) => {
   return (

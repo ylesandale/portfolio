@@ -3,7 +3,8 @@
 import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 
-import { fadeInUp, techStack } from '@/const'
+import { fadeInUp } from '@/const/animations'
+import { techStack } from '@/const/tech-stack'
 
 import { TechStackMarquee } from './tech-stack-marquee'
 

@@ -4,8 +4,10 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Experience, fadeInUpWithDelay } from '@/const'
+import { fadeInUpWithDelay } from '@/const/animations'
+import type { Experience } from '@/const/experience'
+
+import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
 
 type ExperienceItemProps = {
   item: Experience

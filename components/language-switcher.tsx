@@ -1,18 +1,17 @@
 'use client'
 
-import { useRouter } from 'next/navigation'
 import { useLocale } from 'next-intl'
-import { startTransition } from 'react'
 import { LuLanguages } from 'react-icons/lu'
 
-import { Button } from '@/components/ui/button'
+import { locales } from '@/const/routing'
+
+import { Button } from './ui/button'
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu'
-import { locales } from '@/const'
+} from './ui/dropdown-menu'
 
 const languageNames: Record<string, string> = {
   en: 'English',
@@ -21,15 +20,11 @@ const languageNames: Record<string, string> = {
 
 export const LanguageSwitcher = () => {
   const locale = useLocale()
-  const router = useRouter()
 
   const switchLocale = (newLocale: string) => {
     const newPath = `/${newLocale}`
-
-    startTransition(() => {
-      router.push(newPath)
-      router.refresh()
-    })
+    // Для статического экспорта используем полную перезагрузку страницы
+    window.location.replace(newPath)
   }
 
   return (

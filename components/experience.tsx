@@ -3,8 +3,9 @@
 import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 
-import { experienceItems, fadeInUp } from '@/const'
-import { useShowMore } from '@/hooks'
+import { fadeInUp } from '@/const/animations'
+import { experienceItems } from '@/const/experience'
+import { useShowMore } from '@/hooks/use-show-more'
 
 import { ExperienceItem } from './experience-item'
 import { ShowMoreButton } from './show-more-button'

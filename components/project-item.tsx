@@ -4,14 +4,17 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 
+import { fadeInUpWithDelay } from '@/const/animations'
+import { GITHUB_LINK } from '@/const/link'
+import type { Project } from '@/const/projects'
+
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card'
-import { fadeInUpWithDelay, GITHUB_LINK, Project } from '@/const'
+} from './ui/card'
 
 type ProjectItemProps = {
   item: Project

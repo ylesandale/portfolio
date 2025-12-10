@@ -4,8 +4,9 @@ import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import { getLocale, getMessages } from 'next-intl/server'
 
-import { type Locale, type Messages } from '@/const'
-import { Providers } from '@/providers'
+import type { Messages } from '@/const/i18n'
+import { type Locale, routing } from '@/const/routing'
+import { Providers } from '@/providers/providers'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -23,8 +24,23 @@ export const metadata: Metadata = {
 }
 
 const RootLayout = async ({ children }: { children: React.ReactNode }) => {
-  const locale = (await getLocale()) as Locale
-  const messages = (await getMessages()) as Messages
+  const getLocaleAndMessages = async (): Promise<{
+    locale: Locale
+    messages: Messages
+  }> => {
+    try {
+      const locale = (await getLocale()) as Locale
+      const messages = (await getMessages()) as Messages
+      return { locale, messages }
+    } catch {
+      const locale = routing.defaultLocale
+      const messages = (await import(`@/messages/${locale}.json`))
+        .default as Messages
+      return { locale, messages }
+    }
+  }
+
+  const { locale, messages } = await getLocaleAndMessages()
 
   return (
     <html lang={locale} suppressHydrationWarning>
@@ -38,7 +54,7 @@ const RootLayout = async ({ children }: { children: React.ReactNode }) => {
             style={{ backgroundSize: '20px 20px' }}
           />
         </div>
-        <Providers messages={messages} locale={locale}>
+        <Providers initialLocale={locale} initialMessages={messages}>
           {children}
         </Providers>
       </body>

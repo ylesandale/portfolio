@@ -4,8 +4,8 @@ import { motion, type Variants } from 'framer-motion'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 
-import type { NavItem as NavItemType } from '@/const'
-import { scrollToSection } from '@/utils'
+import type { NavItem as NavItemType } from '@/const/nav-menu'
+import { scrollToSection } from '@/utils/scroll-to-section'
 
 type NavItemProps = {
   item: NavItemType

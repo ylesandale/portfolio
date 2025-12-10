@@ -3,7 +3,7 @@
 import { Fallback, Image, Root } from '@radix-ui/react-avatar'
 import type { ComponentPropsWithoutRef } from 'react'
 
-import { cn } from '@/utils'
+import { cn } from '@/utils/cn'
 
 const Avatar = ({
   className,
