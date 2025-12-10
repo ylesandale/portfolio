@@ -1,5 +1,7 @@
 # Portfolio Website
 
+🌐 **Live**: [https://ylesandale.github.io/portfolio](https://ylesandale.github.io/portfolio)
+
 A modern, responsive portfolio website with a minimalistic design, dark theme, and internationalization.
 
 ## ✨ Features
@@ -9,6 +11,7 @@ A modern, responsive portfolio website with a minimalistic design, dark theme, a
 - **Responsive Design** — Fully optimized for all devices
 - **Smooth Animations** — Framer Motion animations with scroll-triggered appearance effects
 - **Optimization** — Next.js App Router for optimal performance
+- **CI/CD** — Automated deployment pipeline with GitHub Actions (linting, type-checking, building, and deploying to GitHub Pages)
 
 ## 🛠️ Tech Stack
 

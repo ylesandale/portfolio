@@ -14,7 +14,7 @@ export const certificationsItems: Certification[] = [
     year: 2023,
     name: 'System Design',
     cerficateImage: '/karpov.png',
-    getUrl: (locale) =>
+    getUrl: (locale) => 
       `${KARPOV_COURSES_LINK}/certificate/1851edd7-2dbe-4044-a150-5d0e3df8dbb3/${locale}/`,
   },
 ]

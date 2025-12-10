@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useLocale } from 'next-intl'
 
 import { fadeInUpWithDelay } from '@/const/animations'
@@ -20,28 +21,32 @@ export const CertificationItem = ({ item }: CertificationItemProps) => {
 
   return (
     <motion.div {...fadeInUpWithDelay}>
-      <Card
-        className="cursor-pointer hover:shadow-lg hover:scale-[1.02] hover:-translate-y-1 transition-all duration-300"
-        onClick={() => window.open(getUrl(locale), '_blank')}
+      <Link
+        href={getUrl(locale)}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block"
       >
-        <div className="relative w-full h-48 overflow-hidden bg-muted/30">
-          <Image
-            src={getStaticPath(cerficateImage)}
-            alt={name}
-            fill
-            className="object-contain"
-            sizes="(max-width: 768px) 100vw, 50vw"
-          />
-        </div>
-        <CardHeader>
-          <CardTitle>{name}</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p className="text-sm text-muted-foreground">
-            {company} • {year}
-          </p>
-        </CardContent>
-      </Card>
+        <Card className="cursor-pointer hover:shadow-lg hover:scale-[1.02] hover:-translate-y-1 transition-all duration-300">
+          <div className="relative w-full h-48 overflow-hidden bg-muted/30">
+            <Image
+              src={getStaticPath(cerficateImage)}
+              alt={name}
+              fill
+              className="object-contain"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
+          <CardHeader>
+            <CardTitle>{name}</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-sm text-muted-foreground">
+              {company} • {year}
+            </p>
+          </CardContent>
+        </Card>
+      </Link>
     </motion.div>
   )
 }
