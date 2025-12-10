@@ -1,0 +1,5 @@
+export const GITHUB_LINK = 'https://github.com/ylesandale'
+export const TELEGRAM_LINK = 'https://t.me/ylesandale'
+export const LINKEDIN_LINK = 'https://www.linkedin.com/in/ylesandale'
+export const EMAIL_LINK = 'mailto:ylesandale7@gmail.com'
+export const KARPOV_COURSES_LINK = 'https://lab.karpov.courses'
