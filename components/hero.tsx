@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 
@@ -10,7 +11,7 @@ import { socialLinks } from '@/const/social-links'
 import { getStaticPath } from '@/utils/get-static-path'
 
 import { NavItem } from './nav-item'
-import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar'
+import { Avatar } from './ui/avatar'
 
 export const Hero = () => {
   const t = useTranslations()
@@ -22,8 +23,13 @@ export const Hero = () => {
     >
       <motion.div {...fadeInUp}>
         <Avatar className="h-24 w-24 sm:h-32 sm:w-32 border-2 border-border">
-          <AvatarImage src={getStaticPath('/avatar.jpg')} alt="Profile" />
-          <AvatarFallback className="text-xl sm:text-2xl">PM</AvatarFallback>
+          <Image
+            width={200}
+            height={200}
+            src={getStaticPath('/avatar.png')}
+            className="object-cover"
+            alt="Avatar"
+          />
         </Avatar>
       </motion.div>
 

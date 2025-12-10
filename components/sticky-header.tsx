@@ -1,6 +1,7 @@
 'use client'
 
 import { AnimatePresence, motion } from 'framer-motion'
+import Image from 'next/image'
 
 import {
   slideFromLeftVariants,
@@ -16,7 +17,7 @@ import { getStaticPath } from '@/utils/get-static-path'
 import { LanguageSwitcher } from './language-switcher'
 import { StickyNavItem } from './nav-item'
 import { ThemeSwitcher } from './theme-switcher'
-import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar'
+import { Avatar } from './ui/avatar'
 
 export const StickyHeader = () => {
   const { isMainBlockHidden } = useMainBlock()
@@ -40,13 +41,13 @@ export const StickyHeader = () => {
                 variants={slideFromLeftVariants}
               >
                 <Avatar className="h-8 w-8 sm:h-10 sm:w-10 border-2 border-border">
-                  <AvatarImage
-                    src={getStaticPath('/avatar.jpg')}
-                    alt="avatar"
+                  <Image
+                    width={200}
+                    height={200}
+                    src={getStaticPath('/avatar.png')}
+                    alt="Avatar"
+                    className="object-cover"
                   />
-                  <AvatarFallback className="text-xs sm:text-sm">
-                    PM
-                  </AvatarFallback>
                 </Avatar>
               </motion.div>
               <div className="flex items-center gap-1 sm:gap-4">
