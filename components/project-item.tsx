@@ -7,6 +7,7 @@ import { useTranslations } from 'next-intl'
 import { fadeInUpWithDelay } from '@/const/animations'
 import { GITHUB_LINK } from '@/const/link'
 import type { Project } from '@/const/projects'
+import { getStaticPath } from '@/utils/get-static-path'
 
 import {
   Card,
@@ -37,7 +38,7 @@ export const ProjectItem = ({ item, index }: ProjectItemProps) => {
       >
         <div className="relative w-full h-48 overflow-hidden bg-muted/30">
           <Image
-            src={item.previewImageUrl}
+            src={getStaticPath(item.previewImageUrl)}
             alt={item.title}
             fill
             className="object-contain"

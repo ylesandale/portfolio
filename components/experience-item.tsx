@@ -30,7 +30,7 @@ export const ExperienceItem = ({ item }: ExperienceItemProps) => {
         <CardContent>
           <p className="text-muted-foreground mb-2">{t(description)}</p>
           <Link
-            href={getStaticPath('/resume.pdf')}
+            href={'/resume.pdf'}
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm text-primary hover:underline transition-colors"

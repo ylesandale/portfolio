@@ -6,6 +6,7 @@ import { useLocale } from 'next-intl'
 
 import { fadeInUpWithDelay } from '@/const/animations'
 import type { Certification } from '@/const/certifications'
+import { getStaticPath } from '@/utils/get-static-path'
 
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
 
@@ -25,7 +26,7 @@ export const CertificationItem = ({ item }: CertificationItemProps) => {
       >
         <div className="relative w-full h-48 overflow-hidden bg-muted/30">
           <Image
-            src={cerficateImage}
+            src={getStaticPath(cerficateImage)}
             alt={name}
             fill
             className="object-contain"

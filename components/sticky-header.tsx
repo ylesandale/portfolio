@@ -40,7 +40,10 @@ export const StickyHeader = () => {
                 variants={slideFromLeftVariants}
               >
                 <Avatar className="h-8 w-8 sm:h-10 sm:w-10 border-2 border-border">
-                  <AvatarImage src={getStaticPath('/avatar.jpg')} alt="avatar" />
+                  <AvatarImage
+                    src={getStaticPath('/avatar.jpg')}
+                    alt="avatar"
+                  />
                   <AvatarFallback className="text-xs sm:text-sm">
                     PM
                   </AvatarFallback>

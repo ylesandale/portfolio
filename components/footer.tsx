@@ -16,7 +16,7 @@ export const Footer = () => {
       <div className="max-w-4xl mx-auto">
         <motion.div className="flex flex-col items-center gap-6" {...fadeInUp}>
           <Link
-            href={getStaticPath('/resume.pdf')}
+            href={'/resume.pdf'}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 text-base sm:text-lg font-medium text-muted-foreground hover:text-foreground transition-colors"
